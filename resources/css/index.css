@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
+:root{
+    --primary-bg-color: #17202A;
+    --secondary-bg-color: #212F3D;
+    --txt-white: #fff;
+    --primary-color: #28b463;
+    --box-shadow: 6px 10px 20px #28b463;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+}
+
+a{
+    color: var(--txt-white);
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    padding: 1px 10px;
+    color: var(--txt-white);
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-bg-color);
+    box-shadow: 0 0.05rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+header img{
+    /* margin-left: 5rem;  */
+    /* position: relative; */
+    width: 120px;
+    display: inline-block;
+    height: 100px;
+    
+}
+
+/* header .navbar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} */
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%;
+    height: 80px; */
+}
+
+
+nav ul{
+    /* display: flex; */
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100;
+    list-style: none;
+    cursor: pointer;
+}
+    
+/* nav ul li{
+    padding: 0.5rem 0.5rem;
+    margin: 0 1.4rem;
+    position: relative;
+    
+} */
+
+nav ul li{
+    display: inline-block;
+    text-decoration: none;
+    width: 15%;
+    text-align: center;
+    font-size: 1rem;
+    /* font-weight: 500; */
+    margin: 0 1.4rem;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+/* nav ul li a{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 1rem 1.5rem;
+
+} */
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: var(--primary-color);
+    width: 0%;
+    left: 0;
+    top: 35px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover:after{
+    width: 100%;
+
+}
+
+header .btn i{
+    font-size: 25px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.social-icons a{
+    padding: 0 1rem;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover{
+    color: var(--primary-color);
+}
+
+/* nav a img{
+    margin-top: 1rem;
+} */
+
+/* Navbar Close */
+
+/* Showcase start */
+
+/* #banner{
+    color: var(--txt-white);
+    background: var(--secondary-bg-color);
+    font-size: 1.2rem;
+    min-height: 100vh;
+    width: 100%;
+} */
+
+.content-wrapper{
+    color: var(--txt-white);
+    background: var(--secondary-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.content-left{
+    width: 70%;
+}
+
+.content-left .lead{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.txt-content{
+    display: flex;
+    width: 100%;
+}
+
+.normal_txt{
+    font-size: 3rem;
+    margin-right: 8px;
+}
+
+.change_txt{
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    position: relative;
+}
+
+/* Animation text Start */
+
+.txt-content .change_txt::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #fff;
+    /* background: rgba(0, 0, 0, 1); */
+    background: var(--secondary-bg-color);
+    animation: animateTxt 5s steps(25) infinite;
+}
+
+/* Animation text Close */
+
+.content-left p{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+}
+
+.content-left button{
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 2rem 2rem 0 0;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.2px;
+    transition: all 0.5s;
+}
+
+.content-left button:hover{
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem 3rem;
+}
+
+.content-left button:active{
+    transform: scale(0.95);
+}
+
+/* right-content start */
+
+.content-right{
+    width: 30%;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5px;
+    transform: translateX(300%);
+    /* background: #fff; */
+    /* transform: skew(-3deg); */
+    animation: imgAnimate 3s forwards;
+
+}
+
+.content-right img{
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    border-radius: 0.5px;
+    /* padding-right: 100px; */
+}
+/* right-content end */
+
+/* Skills Start */
+
+.skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--primary-bg-color);
+    color: #fff;
+    width: 100%;
+    padding: 0 0.1%;
+}
+
+.skills h2{
+    font-size: 2.8rem;
+    padding: 0.5rem 0;
+    color: var(--primary-color);
+}
+.skills i{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.skills .html{
+    color: #e44f26
+}
+
+.skills .css3{
+    color: #1572b6
+}
+
+.skills .js{
+    color: #ffd700
+}
+
+.skills .react{
+    color: #61dafb
+}
+/* Skills Close */
+
+
+/* Animation Start */
+
+@keyframes imgAnimate{
+    to{
+        transform: translateX(0);
+        /* transform: skew(-3deg); */
+    }
+}
+
+@keyframes animateTxt{
+    3%{
+        left: 0;
+    }
+    30%{
+        left: 100%;
+    }
+    80%{
+        left: 100%
+    }
+    100%{
+        left: 0;
+    }
+}
+
+/* Responsive Start */
+
+@media (max-width: 990px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 1rem;
+    }
+}
+
+@media(max-width: 768px){
+    header .btn{
+        display: block;
+    }
+    header nav ul{
+        position: fixed;
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        background: var(--primary-bg-color);
+    }
+}
+
+
+/* Responsive close */
+/* Animation Close */
+/* Showcase close */
